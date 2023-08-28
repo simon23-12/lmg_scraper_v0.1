@@ -11,7 +11,7 @@ async function takeScreenshot() {
   const url = 'https://roomcheck-git-updatedproduction-ekat-br.vercel.app/teacher'; 
   await page.goto(url, { waitUntil: 'domcontentloaded' });
 
-  // Scroll to the end of the page
+
   await autoScroll(page);
 
   const timestamp = new Date().toISOString().replace(/:/g, '-');
