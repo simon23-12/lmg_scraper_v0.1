@@ -8,7 +8,7 @@ async function takeScreenshot() {
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
 
-  const url = 'https://roomcheck-git-updatedproduction-ekat-br.vercel.app/teacher'; // Replace with the desired URL
+  const url = 'https://roomcheck-git-updatedproduction-ekat-br.vercel.app/teacher'; 
   await page.goto(url, { waitUntil: 'domcontentloaded' });
 
   // Scroll to the end of the page
@@ -17,7 +17,7 @@ async function takeScreenshot() {
   const timestamp = new Date().toISOString().replace(/:/g, '-');
   const screenshotPath = path.join(desktopPath, `screenshot-${timestamp}.png`);
 
-  // Capture the full page
+ 
   await page.screenshot({ path: screenshotPath, fullPage: true });
 
   await browser.close();
